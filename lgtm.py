@@ -1,10 +1,11 @@
 import cv2
 import numpy as np
 import os
+import sys
 
-filepath = "images/ha.png"
-img_height = 20
-img_width = 40
+filepath = sys.argv[1]
+img_height = 40
+img_width = 80
 
 def shift(seq):
     return seq[0], seq[1:]+seq[:1]
@@ -26,7 +27,7 @@ for contour in contours:
 canvas = canvas[:,1:-1]
 
 letter = 'l'
-letters = ['l', 'g', 't', 'm']
+letters = ['g', 't', 'm', 'l']
 
 for j, row in enumerate(canvas):
     for i, val in enumerate(row):
