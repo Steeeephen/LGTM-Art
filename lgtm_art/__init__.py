@@ -1,1 +1,1 @@
-from lgtm import cli
+from .lgtm import cli
